@@ -1,0 +1,14 @@
+﻿_id,Field name,Description
+1,SITE_ID,The unique identifier used by Transport and Main Roads for the location that the traffic data is collected at. The is the physical location of a traffic counting device. Sites are located at a specified Through Distance along a Road Section. 
+2,DESCRIPTION,The descriptive deatils of the physical location of the traffic counting device
+3,SITE_DISTANCE,TDist or Through Distance
+4,LONGITUDE,Longitude of the location in decimal degrees (WGS Datum)
+5,LATITUDE,Latitude of the location in decimal degrees (WGS Datum)
+6,AADT,Annual Average Daily Traffic (AADT) is the number of vehicles passing a point on a road in a 24 hour period
+7,RSECT_ID,Is the Gazetted road from which the traffic data is collected. Each Road Section is given a code
+8,ROAD_NAME,The name of a gazetted road section within a major road. For example
+9,TDIST_START,Is the start through distance in kilomtres of the segment the site is attached to for the road section. 
+10,TDIST_END,Is the end through distance in kilomtres of the segment the site is attached to for the road section.
+11,GAZZETAL_DIRECTION,The Gazettal Direction is the direction of the traffic flow. It can be easily recognised by referring to the name of the road eg. Road Section: 10A Brisbane - Gympie this notes that the gazettal direction is from Brisbane to Gympie.
+12,HOUR,Hour of the day for the traffic volume (data averaged over year).
+13,"MON,TUE,WED,THU,FRI,SAT,SUN", Day of week of the traffic volume (data averaged over year). 
