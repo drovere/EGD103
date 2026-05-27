@@ -1,0 +1,42 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "ce004375-063f-4bfe-9275-41b57687f15e",
+   "metadata": {},
+   "source": [
+    "## Data Processing for Engineers\n",
+    "Data processing has become an essential skill for engineers. With increases in computing power and advances in machine learning, data driven solutions to engineering problems are becoming popular across all disciplines. Data allows us to explore the behaviour of complex engineering systems that can't be deterministically modelled (eg. transportation networks, electricity grids, processing plants). It can also be used to conditionally monitor equipment or to validate simulations/models.\n",
+    "\n",
+    "Data processing in EGD103 will consist of the following concepts:\n",
+    "\n",
+    "* **Data wrangling**: This is the process of taking some raw data and converting it to a useable form. \n",
+    "* **Summarising data**: This is the process of taking data and summarising it with statistics.\n",
+    "* **Visualising data**: Data visualisation can clearly and concisely describe trends and relationships in the data.\n",
+    "\n",
+    "The content will primarily focus on programming skills for data processing. The only mathematical knowledge required will be an understanding of basic statistical aggregates (eg. mean, median, variance). More advanced statistical concepts such as inference, modelling and prediction are covered later in the Bachelor program."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
