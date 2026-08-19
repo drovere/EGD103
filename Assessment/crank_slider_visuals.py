@@ -15,13 +15,24 @@ def plot_turning_points(times, positions, turning_times, turning_positions):
 def animate_crank_slider(times, pin_positions, slider_positions):
     import matplotlib.animation as animation
     import IPython.display
+    import numpy as np
 
     fig = plt.figure(figsize=(5, 4))
-    ax = fig.add_subplot(autoscale_on=False, xlim=(-10, 10), ylim=(-10, 10))
-    ax.set_aspect('equal')
-    ax.grid()
 
-    line, = ax.plot([], [], 'o-', lw=2)
+    a1 = np.array(pin_positions)
+    a2 = np.array(slider_positions)
+    min_x = min(min(a1[:,0]), min(a2[:,0]))
+    max_x = max(max(a1[:,0]), max(a2[:,0]))
+    min_y = min(min(a1[:,1]), min(a2[:,1]))
+    max_y = max(max(a1[:,1]), max(a2[:,1]))
+    
+    ax = fig.add_subplot(autoscale_on=False, xlim=(min_x*1.2, max_x*1.2), ylim=(min_y*1.2, max_y*1.2))
+    ax.set_aspect('equal')
+    #ax.grid()
+
+    line, = ax.plot([], [], '-', lw=2)
+    pin, = ax.plot([], [], marker=5, markersize=12)
+    slider, = ax.plot([], [], 's', markersize=12)
     time_template = 'time = %.1fs'
     time_text = ax.text(0.05, 0.9, '', transform=ax.transAxes)
     time_step = times[1] - times[0]
@@ -30,11 +41,13 @@ def animate_crank_slider(times, pin_positions, slider_positions):
         thisx = [0, pin_positions[i][0], slider_positions[i][0]]
         thisy = [0, pin_positions[i][1], slider_positions[i][1]]
         line.set_data(thisx, thisy)
-        return line
+        pin.set_data([0], [0])
+        slider.set_data([slider_positions[i][0]], [slider_positions[i][1]])
+        return line, slider
 
 
-    ani = animation.FuncAnimation(fig, animate, len(pin_positions), interval=(time_step)*100, blit=False)
-    #ani.save('Pendulum simulation 1.gif', fps=1/time_step)
+    ani = animation.FuncAnimation(fig, animate, len(pin_positions), interval=(time_step)*1000)
+    ani.save('Crank slider simulation 1.gif', writer=animation.PillowWriter(fps=100))
     plt.close(fig)
     video = ani.to_jshtml()
     html = IPython.display.HTML(video)
