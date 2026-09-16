@@ -1,0 +1,9 @@
+Field name,Description
+Site,Name of the site.
+Seconds,Number of seconds since data collection began.
+DateTime,Date and time when observation was recorded.
+Water Level,Water level measured in metres above sea level. Entered as -99 if water level was not recorded.
+Prediction,Prediction of the water level made by QLD governement.
+Residual,Error between water level and prediction. Entered as -99 if water level was not recorded.
+Latitude,Latitude coordinate for site location.
+Longitude,Longitude coordinate for site location.
